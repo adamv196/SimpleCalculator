@@ -19,40 +19,38 @@ public class Main {
         cislo2 = sc.nextFloat();
         System.out.println("Vysledok je:");
 
-        DecimalFormat df = new DecimalFormat("##.#");
-        DecimalFormat dff = new DecimalFormat("#.#");
-
+        DecimalFormat df = new DecimalFormat("0.00");
 
         switch (premenna) {
 
             case '+':
                 vysledok = cislo1 + cislo2;
                 System.out.println(df.format(cislo1));
-                System.out.println("+ " +dff.format(cislo2));
+                System.out.println("+ " +df.format(cislo2));
                 System.out.println("-----------");
                 System.out.println(df.format(vysledok));
                 break;
             case '-':
                 vysledok = cislo1 - cislo2;
-                System.out.println(cislo1);
-                System.out.println("- "+cislo2);
+                System.out.println(df.format(cislo1));
+                System.out.println("- "+df.format(cislo2));
                 System.out.println("-----------");
-                System.out.println(vysledok);
+                System.out.println(df.format(vysledok));
                 break;
             case '*':
                 vysledok = cislo1 * cislo2;
                 System.out.println(cislo1);
-                System.out.println("* "+cislo2);
+                System.out.println("* "+df.format(cislo2));
                 System.out.println("-----------");
-                System.out.println(vysledok);
+                System.out.println(df.format(vysledok));
                 break;
 
             case '/':
                 vysledok = cislo1 / cislo2;
-                System.out.println(cislo1);
-                System.out.println("* "+cislo2);
+                System.out.println(df.format(cislo1));
+                System.out.println("/ "+df.format(cislo2));
                 System.out.println("-----------");
-                System.out.println(vysledok);
+                System.out.println(df.format(vysledok));
                 break;
         }
 
